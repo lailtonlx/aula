@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Site</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+    <form class="form-contato">
+<h2>Formulário de Contato</h2>
+<label for="nome">Nome:</label>
+<input type="text" id="nome" required minlength="3" placeholder="Digite seu nome">
+    <form action="/enviar" method="post">
+    <!-- Campo de E-mail (do seu exemplo) -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" >
+
+    <!-- Campo de Telefone (corrigido o fechamento do placeholder) -->
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="Somente números (DDD+Número)">
+
+    <!-- Campo de Assunto (Adicionado 'name' para envio) -->
+    <label for="assunto">Assunto:</label>
+    <select id="assunto" name="assunto">
+        <option value="">Selecione</option>
+        <option value="duvida">Dúvida</option>
+        <option value="sugestao">Sugestão</option>
+        <option value="contato">Contato</option>
+    </select>
+
+    <!-- Campo de Mensagem (Adicionado 'name' e 'id' corrigido) -->
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+    <!-- Botão de Enviar -->
+    <button type="submit">Enviar</button>
+
+    <button id="btnAlerta">Mostrar alerta</button>
+    <button id="btnCor">Mudar cor</button>
+<button id="btnConteudo">Mudar conteudo</button>
+<p id =conteudo>conteudo original</p>
+</form>
+<script src="assets/js/script.js"></script>
+</body>
